@@ -1,0 +1,14 @@
+.NavContainer {
+    overflow: hidden;
+    background-color: #333;
+}
+
+.Button{
+    padding: 10px;
+    float: right;
+}
+
+.HomeButton {
+    padding: 10px;
+    float: left;
+}
