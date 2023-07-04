@@ -6,7 +6,7 @@ export default function Size() {
   return (
     <>
       <SizeForm />
-      <DataDisplay dataName="sizes" />
+      <DataDisplay dataName="sizes" skip={1}/>
     </>
   );
 }

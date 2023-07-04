@@ -6,7 +6,15 @@ const supabase = createServerComponentClient({ cookies });
 
 export default async function DataDisplay(props){
 
-  const { data: data } = await supabase.from(props.dataName).select();
+  var result;
+
+  if(props.dataName == "cleanitemview"){
+    result = await supabase.from(props.dataName).select("Location, School, Garment, Colour, Size, Gender, Quantity");
+  }else{
+    result = await supabase.from(props.dataName).select();
+  }
+
+  const data = result.data;
 
     const getHeadings = () => {
         return Object.keys(data[0]);
@@ -15,7 +23,7 @@ export default async function DataDisplay(props){
       try{
         return(
             <>
-                <Table theadData={getHeadings()} tbodyData={data}/>
+                <Table theadData={getHeadings()} tbodyData={data} skip={props.skip}/>
             </>
         )
       }catch{

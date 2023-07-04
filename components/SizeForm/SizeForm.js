@@ -24,6 +24,7 @@ export default function SizeForm() {
         subsection: formData.category,
       });
     console.log(error);
+    setFormData({name: "", category: ""});
   }
 
   return (

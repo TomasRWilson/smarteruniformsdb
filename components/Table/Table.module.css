@@ -1,5 +1,5 @@
 .tableStyle {
-    max-width: 70%;
+    max-width: 80%;
     margin: 10px auto;
 }
 
@@ -9,5 +9,11 @@
 
 .tableStyle thead tr th{
     padding-left: 5px;
+    width: 10vw;
     border: solid white 1px;
+    background-color: #0f0f0f;
+}
+
+.tableStyle tbody tr:nth-child(even){
+    background-color: #0f0f0f;
 }

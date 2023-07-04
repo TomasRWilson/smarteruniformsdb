@@ -6,7 +6,7 @@ export default function School() {
   return (
     <>
       <SchoolsForm />
-      <DataDisplay dataName="schools"/>
+      <DataDisplay dataName="schools" skip={1}/>
     </>
   );
 }

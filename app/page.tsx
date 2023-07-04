@@ -14,7 +14,7 @@ export default async function Index() {
 
   return (
     <>
-    <DataDisplay dataName={"cleanitemview"} />
+    <DataDisplay dataName={"cleanitemview"} skip={0}/>
     </>
   )
 }

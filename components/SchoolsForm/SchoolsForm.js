@@ -19,12 +19,14 @@ export default async function SchoolsForm() {
     <>
     <div className={styles.formContainer}>
       <form onSubmit={handleSubmit}>
+        <label>School Name</label>
         <input 
         className={styles.formInput}
           id="name" 
           name="name" 
           type="text" 
           placeholder="School Name" />
+          <label>School Address</label>
         <input
         className={styles.formInput}
           id="address"
