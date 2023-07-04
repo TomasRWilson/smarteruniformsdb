@@ -19,13 +19,15 @@ export default function SchoolForm(props) {
     quantity: 0,
   });
 
+  console.log(formData);
+
   async function handleSubmit(event) {
     event.preventDefault();
     const { error } = await supabase
       .from("clothingItems")
       .insert({
         school: formData.school.id,
-        location: formData.location.id,
+        location: formData.location.locId,
         type: formData.type.id,
         colour: formData.colour.id,
         size: formData.size.id,
@@ -100,8 +102,8 @@ export default function SchoolForm(props) {
           data={["Boy", "Girl", "Unisex"]}
         />
         <label>Quantity</label>
-        <input className={styles.formInput} type="number" />
-        <button className={styles.submitButton} type="submit" onChange={(e) => (setFormData({...formData, quantity: e}))}>Add</button>
+        <input className={styles.formInput} type="number" onChange={(e) => (setFormData({...formData, quantity: e.target.value}))}/>
+        <button className={styles.submitButton} type="submit">Add</button>
       </form>
       </div>
     </>

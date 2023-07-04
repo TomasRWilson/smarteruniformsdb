@@ -24,17 +24,19 @@ export default async function School() {
     <div className={styles.formContainer}>
       <form onSubmit={handleSubmit}>
         <input 
+        className={styles.formInput}
           id="name" 
           name="name" 
           type="text" 
           placeholder="School Name" />
         <input
+        className={styles.formInput}
           id="address"
           name="address"
           type="text"
           placeholder="School Address"
         />
-        <button type="submit">Add School</button>
+        <button className={styles.AddButton} type="submit">Add School</button>
       </form>
       </div>
       <DataDisplay table={"schools"} data={schools}/>

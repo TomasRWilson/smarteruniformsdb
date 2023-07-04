@@ -22,6 +22,7 @@ export default function Type() {
     <>
     <div className={styles.formContainer}>
       <form onSubmit={handleSubmit}>
+        <label>Clothing Type</label>
         <input 
           id="name" 
           name="name" 

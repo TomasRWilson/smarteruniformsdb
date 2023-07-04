@@ -22,6 +22,7 @@ export default function Colour() {
     <>
     <div className={styles.formContainer}>
       <form onSubmit={handleSubmit}>
+        <label>Colour</label>
         <input 
           id="name" 
           name="name" 
