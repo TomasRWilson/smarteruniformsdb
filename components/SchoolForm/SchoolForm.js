@@ -24,7 +24,7 @@ export default function SchoolForm(props) {
   async function handleSubmit(event) {
     event.preventDefault();
     const { error } = await supabase
-      .from("clothingItems")
+      .from("clothingitems")
       .insert({
         school: formData.school.id,
         location: formData.location.locId,
