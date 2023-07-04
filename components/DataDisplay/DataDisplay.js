@@ -1,14 +1,12 @@
-"use client"
-
-import { useEffect, useState } from 'react';
-import { createClientComponentClient } from '@supabase/auth-helpers-nextjs';
+import { createServerComponentClient } from "@supabase/auth-helpers-nextjs";
+import { cookies } from "next/headers";
 import Table from "../Table/Table";
 
-const supabase = createClientComponentClient();
+const supabase = createServerComponentClient({ cookies });
 
 export default async function DataDisplay(props){
 
-  const [data, setData] = useState(props.data)
+  const { data: data } = await supabase.from(props.dataName).select();
 
     const getHeadings = () => {
         return Object.keys(data[0]);

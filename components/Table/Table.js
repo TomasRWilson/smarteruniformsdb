@@ -1,6 +1,8 @@
+import styles from "./Table.module.css";
+
 export default function Table({theadData, tbodyData}) {
     return (
-      <table>
+      <table className={styles.tableStyle}>
           <thead>
              <tr>
               {theadData.slice(1).map(heading => {

@@ -12,11 +12,9 @@ export default async function Index() {
     data: { user },
   } = await supabase.auth.getUser()
 
-  const { data: itemData } = await supabase.from("clothingItems").select();
-
   return (
     <>
-    <DataDisplay data={itemData} />
+    <DataDisplay dataName={"cleanitemview"} />
     </>
   )
 }
