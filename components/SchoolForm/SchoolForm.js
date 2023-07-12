@@ -36,6 +36,15 @@ export default function SchoolForm(props) {
       });
     console.log(formData);
     console.log(error);
+    setFormData({
+      type: "",
+      colour: "",
+      size: "",
+      gender: "",
+      school: "",
+      location: "",
+      quantity: 0,
+    });
   }
 
   return (
